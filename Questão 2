@@ -1,7 +1,6 @@
-area = float(input("Informe o tamanho em metros quadrados da área a ser pintada:"))
-cobertura = 3 * 18
-precounit = 80
-qtdlatas = area / cobertura
-qtdlatas = int(qtdlatas) + (1 if qtdlatas % int(qtdlatas) else 0)
-custo = qtdlatas * precounit
-print (f'Serão necessárias {qtdlatas} latas de tinta ao custo total R$ {custo:,.2f}')
+def soma_imposto (taxa_imposto, custo):
+    custo = (taxa_imposto/100+1) * custo
+    return custo
+arg1 = float(input("Informe a porcentagem de imposto sobre o produto: "))
+arg2 = float(input("Informe o custo do produto: "))
+print(f'O preço do produto com imposto é de R$: {soma_imposto(arg1,arg2):.2f}')
