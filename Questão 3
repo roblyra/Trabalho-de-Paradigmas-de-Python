@@ -1,0 +1,32 @@
+def conversor_horas(n1: int, minuto: int, tipohr: str) -> str:
+    if n1 <= 12: 
+        hora = n1
+    else:
+        hora = n1-12
+    if tipohr == "A":
+        tipohr="A.M."
+    else: tipohr="P.M."
+    horaconvertida = (f'{hora:02}:{minuto:02} {tipohr}')
+    return horaconvertida
+    
+def main() -> None:
+    while True:
+        h1 = int(input("Informe a hora (número inteiro entre 0 e 23):"))
+        if h1 > 23: 
+            print('Atenção! Digitar número entre 00 e 23!')
+            continue
+        if h1 < 0: 
+            break
+        m1 = int(input('Informe os minutos (número inteiro entre 0 e 59): '))
+        if m1 <0 or m1>60:
+            print('Atenção! Digitar número entre 00 e 59!')
+            print('Programa Reiniciado!')
+            continue
+        if h1 < 12:
+            tphr = "A"
+        else: tphr= "P"
+        print(f'hora convertida {conversor_horas(h1,m1,tphr)}')
+        
+if __name__ == "__main__":
+    main()
+    print("Fim!")
