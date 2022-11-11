@@ -1,7 +1,0 @@
-area = float(input("Informe o tamanho em metros quadrados da área a ser pintada:"))
-cobertura = 3 * 18
-precounit = 80
-qtdlatas = area / cobertura
-qtdlatas = int(qtdlatas) + (1 if qtdlatas % int(qtdlatas) else 0)
-custo = qtdlatas * precounit
-print (f'Serão necessárias {qtdlatas} latas de tinta ao custo total R$ {custo:,.2f}')
