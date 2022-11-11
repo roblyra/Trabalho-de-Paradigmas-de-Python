@@ -1,0 +1,7 @@
+def CalcArea (BsMaior, BsMenor, Altura):
+    area = ((BsMaior + BsMenor) * Altura) / 2
+    return area
+arg1 = float(input("Informe em centímetros a base maior do trapézio: "))
+arg2 = float(input("Informe em centímetros a base menor do trapézio: "))
+arg3 = float(input("Informe em centímetros a altura do trapézio: "))
+print(f'A área do trapézio é de: {CalcArea(arg1,arg2,arg3)} centímetros')
